@@ -1,0 +1,28 @@
+plugins {
+	id 'java'
+}
+
+repositories {
+    jcenter()
+    
+    maven {
+        name 'm2-dv8tion'
+        url 'https://m2.dv8tion.net/releases'
+    }
+}
+
+java {
+	 toolchain {
+	 	languageVersion = JavaLanguageVersion.of(17)
+	 }
+}
+
+dependencies {
+    implementation group: 'net.dv8tion', name: 'JDA', version: 'latest.release'
+    implementation group: 'com.typesafe', name: 'config', version: 'latest.release'
+    implementation group: 'com.google.code.gson', name: 'gson', version: 'latest.release'
+    implementation group: 'org.apache.commons', name: 'commons-io', version: 'latest.release'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: 'latest.release'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: 'latest.release'
+    implementation group: 'org.reflections', name: 'reflections', version: 'latest.release'
+}
